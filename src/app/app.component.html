@@ -15,6 +15,7 @@
   <p *ngSwitchDefault="0" >No hay cupon de descuento</p>
 </div>
 
+<input type="text" [(ngModel)]="power" >{{ power | exponential }}
 
 <ul>
   <li *ngIf="items.length === 0">La lista está vacía</li>
@@ -23,8 +24,11 @@
 
 
 
-<div *ngFor="let product of products" >
-  {{product.title}}
-  <img [src]="product.image" alt="image-product">
-  {{product.price}}
+<div class="product-grid">
+  <app-product 
+    *ngFor="let product of products" 
+    (productClicked)="clickProduct($event)" 
+    [product]="product">
+  </app-product>
 </div>
+
