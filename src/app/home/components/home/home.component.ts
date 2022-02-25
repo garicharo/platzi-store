@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log( 'Inicia el componente home' )
   }
 
   ngAfterViewInit(): void { // cuando los elementos hijos ya han sido inicializados

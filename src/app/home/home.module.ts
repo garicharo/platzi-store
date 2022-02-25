@@ -5,15 +5,17 @@ import { BannerComponent } from './components/banner/banner.component';
 import { HomeComponent } from './components/home/home.component';
 
 import { HomeRoutingModule } from './home-routing.module';
+import { SharedModule } from './../shared/shared.module';
 
 @NgModule({
     declarations: [
         BannerComponent,
-        HomeComponent
+        HomeComponent        
     ],
     imports: [
         CommonModule,
-        HomeRoutingModule
+        HomeRoutingModule,
+        SharedModule
     ]
 })
 export class HomeModule {
